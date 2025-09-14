@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    string mensagem;
+
+    if (DateTime.Now.Hour < 12)
+    {
+        mensagem = "Bom dia!";
+    }
+    else if (DateTime.Now.Hour < 18)
+    {
+        mensagem = "Bom tarde!";
+    }
+    else
+    {
+        mensagem = "Boa noite!";
+    }
+}
+
+<div class="text-center">
+    <h1 class="display-4">Seja bem vindo ao meu TP1.8</h1>
+    <p>@mensagem</p>
+
+</div>
+
+<ul>
+    <li>Café: <strong>R$ 14,99</strong></li>
+    <li>Energético Monster: <strong>R$ 10,90</strong></li>
+    <li>Chá: <strong>R$ 9,90</strong></li>
+</ul>
